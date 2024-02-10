@@ -1,0 +1,409 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80D098E0-433C-4AE0-9540-307214B63E41}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Farming_managment_system</RootNamespace>
+    <AssemblyName>Farming managment system</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44379</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin Home.aspx" />
+    <Content Include="Admin Login.aspx" />
+    <Content Include="Bill.aspx" />
+    <Content Include="Buyer Home.aspx" />
+    <Content Include="Buyer Login.aspx" />
+    <Content Include="Buyer reg.aspx" />
+    <Content Include="Complaints.aspx" />
+    <Content Include="Farmer Home.aspx" />
+    <Content Include="Farmer Login.aspx" />
+    <Content Include="Farmer reg.aspx" />
+    <Content Include="FarmFresh - Organic Farm Website Template.html" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\about.png" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\all.min.css" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\blog-1.jpg" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\blog-2.jpg" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\blog-3.jpg" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\bootstrap-icons.css" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\bootstrap.min.css" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\carousel-1.jpg" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\carousel-2.jpg" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\feature.png" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\owl.carousel.min.css" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\product-1.png" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\product-2.png" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\style.css" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\team-1.jpg" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\team-2.jpg" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\team-3.jpg" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\testimonial-2.jpg" />
+    <Content Include="imges\crops.jpeg" />
+    <Content Include="imges\login.jpg" />
+    <Content Include="imges\market price.jpg" />
+    <Content Include="imges\Payment1.jpg" />
+    <Content Include="imges\purchase.jpg" />
+    <Content Include="imges\register.jpg" />
+    <Content Include="img\Beans.jpg" />
+    <Content Include="img\Beetroot.jpg" />
+    <Content Include="img\cabage.jpg" />
+    <Content Include="img\carrot.jpg" />
+    <Content Include="img\cucumbers.jpg" />
+    <Content Include="img\onion.jpg" />
+    <Content Include="img\peas.jpg" />
+    <Content Include="img\potatoes.jpg" />
+    <Content Include="img\spinach.jpg" />
+    <Content Include="img\Tomato.jpeg" />
+    <Content Include="MainPage.aspx" />
+    <Content Include="Market Price.aspx" />
+    <Content Include="moon firm.html" />
+    <Content Include="moon firm_files\1%281%29.png" />
+    <Content Include="moon firm_files\1.png" />
+    <Content Include="moon firm_files\2%281%29.png" />
+    <Content Include="moon firm_files\2.png" />
+    <Content Include="moon firm_files\3%281%29.png" />
+    <Content Include="moon firm_files\3.png" />
+    <Content Include="moon firm_files\4.png" />
+    <Content Include="moon firm_files\about.png" />
+    <Content Include="moon firm_files\banner.jpg" />
+    <Content Include="moon firm_files\bootstrap.min.css" />
+    <Content Include="moon firm_files\call.png" />
+    <Content Include="moon firm_files\call1.png" />
+    <Content Include="moon firm_files\email.png" />
+    <Content Include="moon firm_files\email1.png" />
+    <Content Include="moon firm_files\font-awesome.min.css" />
+    <Content Include="moon firm_files\google_gray.svg" />
+    <Content Include="moon firm_files\jquery.fancybox.min.css" />
+    <Content Include="moon firm_files\jquery.mCustomScrollbar.min.css" />
+    <Content Include="moon firm_files\loading.gif" />
+    <Content Include="moon firm_files\loc.png" />
+    <Content Include="moon firm_files\loc1.png" />
+    <Content Include="moon firm_files\logo.png" />
+    <Content Include="moon firm_files\offer1.png" />
+    <Content Include="moon firm_files\offer2.png" />
+    <Content Include="moon firm_files\offer3.png" />
+    <Content Include="moon firm_files\product_img1.jpg" />
+    <Content Include="moon firm_files\product_img2.jpg" />
+    <Content Include="moon firm_files\product_img3.jpg" />
+    <Content Include="moon firm_files\product_img4.jpg" />
+    <Content Include="moon firm_files\product_img5.jpg" />
+    <Content Include="moon firm_files\responsive.css" />
+    <Content Include="moon firm_files\saved_resource.html" />
+    <Content Include="moon firm_files\search_icon.png" />
+    <Content Include="moon firm_files\style.css" />
+    <Content Include="moon firm_files\tes.jpg" />
+    <Content Include="moon firm_files\transparent.png" />
+    <Content Include="Payment.aspx" />
+    <Content Include="Purchase.aspx" />
+    <Content Include="Updatecrops.aspx" />
+    <Content Include="View Complaints.aspx" />
+    <Content Include="View Crops.aspx" />
+    <Content Include="View Farmer.aspx" />
+    <Content Include="View Payment.aspx" />
+    <Content Include="ViewBuyers.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin Home.aspx.cs">
+      <DependentUpon>Admin Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Home.aspx.designer.cs">
+      <DependentUpon>Admin Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Login.aspx.cs">
+      <DependentUpon>Admin Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Login.aspx.designer.cs">
+      <DependentUpon>Admin Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bill.aspx.cs">
+      <DependentUpon>Bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bill.aspx.designer.cs">
+      <DependentUpon>Bill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer Home.aspx.cs">
+      <DependentUpon>Buyer Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer Home.aspx.designer.cs">
+      <DependentUpon>Buyer Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer Login.aspx.cs">
+      <DependentUpon>Buyer Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer Login.aspx.designer.cs">
+      <DependentUpon>Buyer Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer reg.aspx.cs">
+      <DependentUpon>Buyer reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer reg.aspx.designer.cs">
+      <DependentUpon>Buyer reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Complaints.aspx.cs">
+      <DependentUpon>Complaints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Complaints.aspx.designer.cs">
+      <DependentUpon>Complaints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer Home.aspx.cs">
+      <DependentUpon>Farmer Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer Home.aspx.designer.cs">
+      <DependentUpon>Farmer Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer Login.aspx.cs">
+      <DependentUpon>Farmer Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer Login.aspx.designer.cs">
+      <DependentUpon>Farmer Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer reg.aspx.cs">
+      <DependentUpon>Farmer reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer reg.aspx.designer.cs">
+      <DependentUpon>Farmer reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Market Price.aspx.cs">
+      <DependentUpon>Market Price.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Market Price.aspx.designer.cs">
+      <DependentUpon>Market Price.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase.aspx.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase.aspx.designer.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Updatecrops.aspx.cs">
+      <DependentUpon>Updatecrops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Updatecrops.aspx.designer.cs">
+      <DependentUpon>Updatecrops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Complaints.aspx.cs">
+      <DependentUpon>View Complaints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Complaints.aspx.designer.cs">
+      <DependentUpon>View Complaints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Crops.aspx.cs">
+      <DependentUpon>View Crops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Crops.aspx.designer.cs">
+      <DependentUpon>View Crops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Farmer.aspx.cs">
+      <DependentUpon>View Farmer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Farmer.aspx.designer.cs">
+      <DependentUpon>View Farmer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Payment.aspx.cs">
+      <DependentUpon>View Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Payment.aspx.designer.cs">
+      <DependentUpon>View Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBuyers.aspx.cs">
+      <DependentUpon>ViewBuyers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBuyers.aspx.designer.cs">
+      <DependentUpon>ViewBuyers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FarmFresh - Organic Farm Website Template_files\bootstrap.bundle.min.js.download" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\counterup.min.js.download" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\css2" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\easing.min.js.download" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\jquery-3.4.1.min.js.download" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\main.js.download" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\owl.carousel.min.js.download" />
+    <Content Include="FarmFresh - Organic Farm Website Template_files\waypoints.min.js.download" />
+    <Content Include="moon firm_files\AuthenticationService.Authenticate" />
+    <Content Include="moon firm_files\bootstrap.bundle.min.js.download" />
+    <Content Include="moon firm_files\common.js.download" />
+    <Content Include="moon firm_files\controls.js.download" />
+    <Content Include="moon firm_files\css" />
+    <Content Include="moon firm_files\css%281%29" />
+    <Content Include="moon firm_files\custom.js.download" />
+    <Content Include="moon firm_files\jquery-3.0.0.min.js.download" />
+    <Content Include="moon firm_files\jquery.fancybox.min.js.download" />
+    <Content Include="moon firm_files\jquery.mCustomScrollbar.concat.min.js.download" />
+    <Content Include="moon firm_files\jquery.min.js.download" />
+    <Content Include="moon firm_files\js" />
+    <Content Include="moon firm_files\map.js.download" />
+    <Content Include="moon firm_files\marker.js.download" />
+    <Content Include="moon firm_files\onion.js.download" />
+    <Content Include="moon firm_files\plugin.js.download" />
+    <Content Include="moon firm_files\popper.min.js.download" />
+    <Content Include="moon firm_files\QuotaService.RecordEvent" />
+    <Content Include="moon firm_files\util.js.download" />
+    <Content Include="moon firm_files\vt" />
+    <Content Include="moon firm_files\vt%281%29" />
+    <Content Include="moon firm_files\vt%2810%29" />
+    <Content Include="moon firm_files\vt%2811%29" />
+    <Content Include="moon firm_files\vt%2812%29" />
+    <Content Include="moon firm_files\vt%2813%29" />
+    <Content Include="moon firm_files\vt%2814%29" />
+    <Content Include="moon firm_files\vt%2815%29" />
+    <Content Include="moon firm_files\vt%2816%29" />
+    <Content Include="moon firm_files\vt%282%29" />
+    <Content Include="moon firm_files\vt%283%29" />
+    <Content Include="moon firm_files\vt%284%29" />
+    <Content Include="moon firm_files\vt%285%29" />
+    <Content Include="moon firm_files\vt%286%29" />
+    <Content Include="moon firm_files\vt%287%29" />
+    <Content Include="moon firm_files\vt%288%29" />
+    <Content Include="moon firm_files\vt%289%29" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FarmFresh - Organic Farm Website Template_files\NewFolder1\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59759</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44379/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
